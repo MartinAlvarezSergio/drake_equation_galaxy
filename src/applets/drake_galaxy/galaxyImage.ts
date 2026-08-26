@@ -3,7 +3,14 @@
  * Simulation stays usable if the asset fails to load (caller falls back to procedural).
  */
 
-export const GALAXY_IMAGE_URL = "/drake_galaxy/milky_way_nasa.jpg";
+/** Respect Vite `base` so GitHub Pages subpath deploys resolve the asset. */
+function galaxyImageUrl(): string {
+  const base = import.meta.env.BASE_URL || "/";
+  const prefix = base.endsWith("/") ? base : `${base}/`;
+  return `${prefix}drake_galaxy/milky_way_nasa.jpg`;
+}
+
+export const GALAXY_IMAGE_URL = galaxyImageUrl();
 export const GALAXY_IMAGE_CREDIT =
   "NASA/JPL-Caltech/R. Hurt (public domain artist's impression)";
 
