@@ -70,7 +70,7 @@ export function DrakeGalaxyCanvas({ host }: DrakeGalaxyCanvasProps): JSX.Element
   const [zoom, setZoom] = useState(DEFAULT_ZOOM);
   const [detectRadius, setDetectRadius] = useState(DEFAULT_DETECT_RADIUS);
   const [armTightness, setArmTightness] = useState(DEFAULT_ARM_TIGHTNESS);
-  const [layoutMode, setLayoutMode] = useState<DrakeLayoutMode>("procedural");
+  const [layoutMode, setLayoutMode] = useState<DrakeLayoutMode>("image");
   const [imageStatus, setImageStatus] = useState<"loading" | "ready" | "error">("loading");
   const [highlightStage, setHighlightStage] = useState<DrakeStage>("active");
   const [dimBelow, setDimBelow] = useState(false);
@@ -91,7 +91,8 @@ export function DrakeGalaxyCanvas({ host }: DrakeGalaxyCanvasProps): JSX.Element
         bulgeRadius: DEFAULT_BULGE_RADIUS,
         zoom: DEFAULT_ZOOM,
         detectRadius: DEFAULT_DETECT_RADIUS,
-        armTightness: DEFAULT_ARM_TIGHTNESS
+        armTightness: DEFAULT_ARM_TIGHTNESS,
+        layoutMode: "image"
       }),
     []
   );
@@ -291,7 +292,7 @@ export function DrakeGalaxyCanvas({ host }: DrakeGalaxyCanvasProps): JSX.Element
     setZoom(DEFAULT_ZOOM);
     setDetectRadius(DEFAULT_DETECT_RADIUS);
     setArmTightness(DEFAULT_ARM_TIGHTNESS);
-    setLayoutMode("procedural");
+    setLayoutMode("image");
     setDimBelow(false);
     setPaused(false);
     setRunning(true);

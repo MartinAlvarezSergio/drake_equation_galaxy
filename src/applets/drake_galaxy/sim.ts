@@ -346,7 +346,7 @@ export function createDrakeGalaxySim(initial?: Partial<DrakeSettings>): DrakeGal
     MIN_ARM_TIGHTNESS,
     MAX_ARM_TIGHTNESS
   );
-  let layoutMode: DrakeLayoutMode = initial?.layoutMode ?? "procedural";
+  let layoutMode: DrakeLayoutMode = initial?.layoutMode ?? "image";
   let galaxyMap: GalaxyLuminanceMap | null = null;
   let time = 0;
   let earth = earthMarker();
@@ -460,7 +460,7 @@ export function createDrakeGalaxySim(initial?: Partial<DrakeSettings>): DrakeGal
       zoom = DEFAULT_ZOOM;
       detectRadius = DEFAULT_DETECT_RADIUS;
       armTightness = DEFAULT_ARM_TIGHTNESS;
-      layoutMode = "procedural";
+      layoutMode = "image";
       earth = earthMarker();
       rebuildStars();
     }
