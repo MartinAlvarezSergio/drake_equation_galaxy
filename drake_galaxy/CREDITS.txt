@@ -1,0 +1,4 @@
+NASA/JPL-Caltech/R. Hurt — artist's impression of the Milky Way (Spitzer-based).
+Public domain (U.S. government work).
+Source: Wikimedia Commons "Milky Way 2005.jpg".
+Used as an optional luminance map for sampling illustrative star positions in the Drake galaxy applet.
